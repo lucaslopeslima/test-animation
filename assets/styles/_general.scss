@@ -1,0 +1,14 @@
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.items{
+    display: flex;
+    gap: 0.4rem;
+    perspective: calc($index * 35);
+    
+}
+
