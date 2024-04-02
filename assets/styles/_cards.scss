@@ -21,7 +21,7 @@
     &::after{
         left: calc($index * -1);
     }
-    &:hover{
+    /* &:hover{
         filter: inherit;
         transform: translateZ(calc($index * 10));
     }
@@ -60,7 +60,7 @@
     &:has(+ * + * + * + :hover){
         filter: inherit;
         transform: translateZ(calc($index * 0.6)) rotateY(-15deg);
-    }
+    } */
     &:active, 
     &:focus{
         width: 20vw;
@@ -72,4 +72,51 @@
         margin: 0 0.45vw;
         background-color: transparent;
     }
+}
+
+/// SOLUÇÂO
+
+.item.hovered, .hover-temp {
+    //margin-left: -1px;
+    //margin-right: -1px;
+    filter: inherit;
+    transform: translateZ(calc($index * 10));
+}
+
+.item.adjacent-hovered-left-1{
+    filter: inherit;
+    transform: translateZ(calc($index * 8.5)) rotateY(-35deg);
+}
+.item.adjacent-hovered-left-2{
+    filter: inherit;
+    transform: translateZ(calc($index * 5.6)) rotateY(-40deg);
+}
+.item.adjacent-hovered-left-3{
+    filter: inherit;
+    transform: translateZ(calc($index * 2.5)) rotateY(-30deg);
+}
+.item.adjacent-hovered-left-4{
+    filter: inherit;
+    transform: translateZ(calc($index * 0.6)) rotateY(-15deg);
+}
+
+// Estilos para os itens à direita 
+.item.adjacent-hovered-right-1 {
+    filter: inherit;
+    transform: translateZ(calc($index * 8.5)) rotateY(35deg);
+}
+
+.item.adjacent-hovered-right-2 {
+    filter: inherit;
+    transform: translateZ(calc($index * 5.6)) rotateY(40deg);
+}
+
+.item.adjacent-hovered-right-3 {
+    filter: inherit;
+    transform: translateZ(calc($index * 2.5)) rotateY(30deg);
+}
+
+.item.adjacent-hovered-right-4 {
+    filter: inherit;
+    transform: translateZ(calc($index * 0.6)) rotateY(15deg);
 }
